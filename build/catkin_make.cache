@@ -1,0 +1,2 @@
+
+-DPYTHON_EXECUTABLE=/usr/bin/python3 -DCATKIN_DEVEL_PREFIX=/home/charlie/BWSI_Student_Code/devel -DCMAKE_INSTALL_PREFIX=/home/charlie/BWSI_Student_Code/install -G Unix Makefiles
