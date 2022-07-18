@@ -49,8 +49,8 @@ find_package(catkin REQUIRED
 ## Generate messages in the 'msg' folder
  add_message_files(
    FILES
-   state.msg
-   flip.msg
+   State.msg
+   Flip.msg
 )
 
 ## Generate services in the 'srv' folder

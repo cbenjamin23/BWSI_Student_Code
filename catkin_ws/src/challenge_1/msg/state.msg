@@ -1,2 +1,0 @@
-int battery_percentage
-float height

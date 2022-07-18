@@ -53,30 +53,30 @@ CMAKE_BINARY_DIR = /home/charlie/BWSI_Student_Code/catkin_ws/build
 # Include the progress variables for this target.
 include challenge_1/CMakeFiles/challenge_1_generate_messages_py.dir/progress.make
 
-challenge_1/CMakeFiles/challenge_1_generate_messages_py: /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_state.py
-challenge_1/CMakeFiles/challenge_1_generate_messages_py: /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_flip.py
+challenge_1/CMakeFiles/challenge_1_generate_messages_py: /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_State.py
+challenge_1/CMakeFiles/challenge_1_generate_messages_py: /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_Flip.py
 challenge_1/CMakeFiles/challenge_1_generate_messages_py: /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/__init__.py
 
 
-/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_state.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_state.py: /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/state.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/charlie/BWSI_Student_Code/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG challenge_1/state"
-	cd /home/charlie/BWSI_Student_Code/catkin_ws/build/challenge_1 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/state.msg -Ichallenge_1:/home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p challenge_1 -o /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg
+/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_State.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_State.py: /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/State.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/charlie/BWSI_Student_Code/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG challenge_1/State"
+	cd /home/charlie/BWSI_Student_Code/catkin_ws/build/challenge_1 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/State.msg -Ichallenge_1:/home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p challenge_1 -o /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg
 
-/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_flip.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_flip.py: /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/flip.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/charlie/BWSI_Student_Code/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG challenge_1/flip"
-	cd /home/charlie/BWSI_Student_Code/catkin_ws/build/challenge_1 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/flip.msg -Ichallenge_1:/home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p challenge_1 -o /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg
+/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_Flip.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_Flip.py: /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/Flip.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/charlie/BWSI_Student_Code/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG challenge_1/Flip"
+	cd /home/charlie/BWSI_Student_Code/catkin_ws/build/challenge_1 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/Flip.msg -Ichallenge_1:/home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p challenge_1 -o /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg
 
 /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/__init__.py: /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_state.py
-/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/__init__.py: /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_flip.py
+/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/__init__.py: /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_State.py
+/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/__init__.py: /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_Flip.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/charlie/BWSI_Student_Code/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for challenge_1"
 	cd /home/charlie/BWSI_Student_Code/catkin_ws/build/challenge_1 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg --initpy
 
 challenge_1_generate_messages_py: challenge_1/CMakeFiles/challenge_1_generate_messages_py
-challenge_1_generate_messages_py: /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_state.py
-challenge_1_generate_messages_py: /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_flip.py
+challenge_1_generate_messages_py: /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_State.py
+challenge_1_generate_messages_py: /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_Flip.py
 challenge_1_generate_messages_py: /home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/__init__.py
 challenge_1_generate_messages_py: challenge_1/CMakeFiles/challenge_1_generate_messages_py.dir/build.make
 

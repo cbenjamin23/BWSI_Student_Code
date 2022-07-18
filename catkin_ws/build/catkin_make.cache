@@ -1,2 +1,2 @@
-challenge_1
+challenge_1:localization_naive
 -DCATKIN_DEVEL_PREFIX=/home/charlie/BWSI_Student_Code/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/charlie/BWSI_Student_Code/catkin_ws/install -G Unix Makefiles

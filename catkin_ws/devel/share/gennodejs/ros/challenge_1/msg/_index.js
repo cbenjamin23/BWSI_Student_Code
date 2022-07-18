@@ -1,10 +1,10 @@
 
 "use strict";
 
-let flip = require('./flip.js');
-let state = require('./state.js');
+let State = require('./State.js');
+let Flip = require('./Flip.js');
 
 module.exports = {
-  flip: flip,
-  state: state,
+  State: State,
+  Flip: Flip,
 };

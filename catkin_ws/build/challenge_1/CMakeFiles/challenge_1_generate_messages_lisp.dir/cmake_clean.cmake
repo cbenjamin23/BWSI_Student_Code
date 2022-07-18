@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/charlie/BWSI_Student_Code/catkin_ws/devel/share/common-lisp/ros/challenge_1/msg/flip.lisp"
-  "/home/charlie/BWSI_Student_Code/catkin_ws/devel/share/common-lisp/ros/challenge_1/msg/state.lisp"
+  "/home/charlie/BWSI_Student_Code/catkin_ws/devel/share/common-lisp/ros/challenge_1/msg/Flip.lisp"
+  "/home/charlie/BWSI_Student_Code/catkin_ws/devel/share/common-lisp/ros/challenge_1/msg/State.lisp"
   "CMakeFiles/challenge_1_generate_messages_lisp"
 )
 

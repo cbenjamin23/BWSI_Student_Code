@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_Flip.py"
+  "/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_State.py"
   "/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/__init__.py"
-  "/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_flip.py"
-  "/home/charlie/BWSI_Student_Code/catkin_ws/devel/lib/python3/dist-packages/challenge_1/msg/_state.py"
   "CMakeFiles/challenge_1_generate_messages_py"
 )
 

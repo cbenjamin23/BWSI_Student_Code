@@ -53,28 +53,28 @@ CMAKE_BINARY_DIR = /home/charlie/BWSI_Student_Code/catkin_ws/build
 # Include the progress variables for this target.
 include challenge_1/CMakeFiles/challenge_1_generate_messages_eus.dir/progress.make
 
-challenge_1/CMakeFiles/challenge_1_generate_messages_eus: /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/state.l
-challenge_1/CMakeFiles/challenge_1_generate_messages_eus: /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/flip.l
+challenge_1/CMakeFiles/challenge_1_generate_messages_eus: /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/State.l
+challenge_1/CMakeFiles/challenge_1_generate_messages_eus: /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/Flip.l
 challenge_1/CMakeFiles/challenge_1_generate_messages_eus: /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/manifest.l
 
 
-/home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/state.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/state.l: /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/state.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/charlie/BWSI_Student_Code/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from challenge_1/state.msg"
-	cd /home/charlie/BWSI_Student_Code/catkin_ws/build/challenge_1 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/state.msg -Ichallenge_1:/home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p challenge_1 -o /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg
+/home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/State.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/State.l: /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/State.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/charlie/BWSI_Student_Code/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from challenge_1/State.msg"
+	cd /home/charlie/BWSI_Student_Code/catkin_ws/build/challenge_1 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/State.msg -Ichallenge_1:/home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p challenge_1 -o /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg
 
-/home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/flip.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/flip.l: /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/flip.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/charlie/BWSI_Student_Code/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from challenge_1/flip.msg"
-	cd /home/charlie/BWSI_Student_Code/catkin_ws/build/challenge_1 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/flip.msg -Ichallenge_1:/home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p challenge_1 -o /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg
+/home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/Flip.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/Flip.l: /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/Flip.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/charlie/BWSI_Student_Code/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from challenge_1/Flip.msg"
+	cd /home/charlie/BWSI_Student_Code/catkin_ws/build/challenge_1 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/Flip.msg -Ichallenge_1:/home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p challenge_1 -o /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg
 
 /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/charlie/BWSI_Student_Code/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for challenge_1"
 	cd /home/charlie/BWSI_Student_Code/catkin_ws/build/challenge_1 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1 challenge_1 std_msgs
 
 challenge_1_generate_messages_eus: challenge_1/CMakeFiles/challenge_1_generate_messages_eus
-challenge_1_generate_messages_eus: /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/state.l
-challenge_1_generate_messages_eus: /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/flip.l
+challenge_1_generate_messages_eus: /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/State.l
+challenge_1_generate_messages_eus: /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/msg/Flip.l
 challenge_1_generate_messages_eus: /home/charlie/BWSI_Student_Code/catkin_ws/devel/share/roseus/ros/challenge_1/manifest.l
 challenge_1_generate_messages_eus: challenge_1/CMakeFiles/challenge_1_generate_messages_eus.dir/build.make
 

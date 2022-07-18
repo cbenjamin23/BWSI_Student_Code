@@ -39,8 +39,8 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/challenge_1/msg" TYPE FILE FILES
-    "/home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/state.msg"
-    "/home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/flip.msg"
+    "/home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/State.msg"
+    "/home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/msg/Flip.msg"
     )
 endif()
 
@@ -89,5 +89,13 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/challenge_1" TYPE FILE FILES "/home/charlie/BWSI_Student_Code/catkin_ws/src/challenge_1/package.xml")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/challenge_1" TYPE PROGRAM FILES "/home/charlie/BWSI_Student_Code/catkin_ws/build/challenge_1/catkin_generated/installspace/driver.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/challenge_1" TYPE PROGRAM FILES "/home/charlie/BWSI_Student_Code/catkin_ws/build/challenge_1/catkin_generated/installspace/teleop.py")
 endif()
 
