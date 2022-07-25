@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 import traceback
 import rospy
+import cv2
+import math
+import numpy as np
 from cv_bridge import CvBridge
 from djitellopy import Tello
 from std_msgs.msg import Empty
@@ -81,6 +84,19 @@ class Driver:
     def stop(self, data):
         self.running = False
         
+    def _rotationMatrix2EulerAngles(self, R):
+        sy = math.sqrt(R[0,0]*R[0,0] + R[0,1]*R[0,1])
+        singular = sy<1e-6
+        if not singular:
+            x = math.atan2(R[2,1], R[2,2])
+            y = math.atan2(-R[2,0], sy)
+            z = math.atan2(R[1,0], R[0,0])
+        else:
+            x = math.atan2(-R[1,2], R[1,1])
+            y = math.atan2(-R[2,0], sy)
+            z = 0
+        return np.rad2deg(np.array([x,y,z]))
+        
     def run(self):
         r = rospy.Rate(self.FPS)
         self.running = True
@@ -89,11 +105,46 @@ class Driver:
             # rospy.loginfo(f'the tello is {info.state}')
             frame = self.frame_read.frame
             self.img_pub.publish(self.br.cv2_to_imgmsg(frame, 'bgr8')) #converting cv2 image to ross image form
+            
+            arucoDict = cv2.aruco.Dictionary_get(cv2.aruco.DICT_5X5_1000)
+            corners, ids, rejects = cv2.aruco.detectMarkers(frame, arucoDict)
+            print("Corners are: " + str(corners))
+            print("ID is: " + str(ids))
+            obj = marker(ids, corners)
+            if corners:
+                print("centroid is: " + str(obj.get_centroid()))
+                print("average side length is: " + str(obj.avg_side_len()))
+                cameraMatrix = np.array([[921.170702, 0.000000, 459.904354], [0.000000, 919.018377, 351.238301], [0.000000, 0.000000, 1.000000]])
+                distCoeffs = np.array([-0.033458, 0.105152, 0.001256, -0.006647, 0.000000])
+                rvecs, tvecs, _objPoints = cv2.aruco.estimatePoseSingleMarkers(corners, 0.127, cameraMatrix, distCoeffs)
+                print("X, Y, and Z translation vectors are: " + str(tvecs))
+                R_tc = np.matrix(cv2.Rodrigues(rvecs)[0]).T
+                pitch, yaw, roll = self._rotationMatrix2EulerAngles(R_tc)
+                print("roll is: " + str(-roll))
+                print("pitch is: " + str(-(pitch + 180))) # +180 so that pointing directly at it is 0
+                print("yaw is: " + str(-yaw))
+            
             if self.tello.is_flying:
                 self.tello.send_rc_control(int(self.v[0]), int(self.v[1]), int(self.v[2]), int(self.v[3]))
             r.sleep()
         self.land()
+        
+        
+class marker:
     
+    def __init__(self, ID, corners) -> None:
+        self.corners = corners
+        self.ID = ID
+        
+    def get_centroid(self):
+        return np.mean(self.corners[0][0], axis=0)
+        
+    def avg_side_len(self):
+        side_lengths = [math.dist(self.corners[0][0][0], self.corners[0][0][1]), math.dist(self.corners[0][0][1], self.corners[0][0][2]),
+                            math.dist(self.corners[0][0][2], self.corners[0][0][3]), math.dist(self.corners[0][0][3], self.corners[0][0][0])]
+        return np.mean(side_lengths)
+        
+        
 if __name__ == '__main__':
     try:
         driver = Driver()  
@@ -104,7 +155,3 @@ if __name__ == '__main__':
         print('RIP the code is failing (sent from Driver)')
         pass
         
-    
-    # need to understand:
-    #cMake
-    
