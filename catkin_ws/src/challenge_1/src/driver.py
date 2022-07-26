@@ -84,19 +84,6 @@ class Driver:
     def stop(self, data):
         self.running = False
         
-    def _rotationMatrix2EulerAngles(self, R):
-        sy = math.sqrt(R[0,0]*R[0,0] + R[0,1]*R[0,1])
-        singular = sy<1e-6
-        if not singular:
-            x = math.atan2(R[2,1], R[2,2])
-            y = math.atan2(-R[2,0], sy)
-            z = math.atan2(R[1,0], R[0,0])
-        else:
-            x = math.atan2(-R[1,2], R[1,1])
-            y = math.atan2(-R[2,0], sy)
-            z = 0
-        return np.rad2deg(np.array([x,y,z]))
-        
     def run(self):
         r = rospy.Rate(self.FPS)
         self.running = True
@@ -114,15 +101,8 @@ class Driver:
             if corners:
                 print("centroid is: " + str(obj.get_centroid()))
                 print("average side length is: " + str(obj.avg_side_len()))
-                cameraMatrix = np.array([[921.170702, 0.000000, 459.904354], [0.000000, 919.018377, 351.238301], [0.000000, 0.000000, 1.000000]])
-                distCoeffs = np.array([-0.033458, 0.105152, 0.001256, -0.006647, 0.000000])
-                rvecs, tvecs, _objPoints = cv2.aruco.estimatePoseSingleMarkers(corners, 0.127, cameraMatrix, distCoeffs)
-                print("X, Y, and Z translation vectors are: " + str(tvecs))
-                R_tc = np.matrix(cv2.Rodrigues(rvecs)[0]).T
-                pitch, yaw, roll = self._rotationMatrix2EulerAngles(R_tc)
-                print("roll is: " + str(-roll))
-                print("pitch is: " + str(-(pitch + 180))) # +180 so that pointing directly at it is 0
-                print("yaw is: " + str(-yaw))
+                obj.getAttributes()
+                
             
             if self.tello.is_flying:
                 self.tello.send_rc_control(int(self.v[0]), int(self.v[1]), int(self.v[2]), int(self.v[3]))
@@ -143,6 +123,40 @@ class marker:
         side_lengths = [math.dist(self.corners[0][0][0], self.corners[0][0][1]), math.dist(self.corners[0][0][1], self.corners[0][0][2]),
                             math.dist(self.corners[0][0][2], self.corners[0][0][3]), math.dist(self.corners[0][0][3], self.corners[0][0][0])]
         return np.mean(side_lengths)
+    
+    def _rotationMatrix2EulerAngles(self, R):
+        sy = math.sqrt(R[0,0]*R[0,0] + R[0,1]*R[0,1])
+        singular = sy<1e-6
+        if not singular:
+            x = math.atan2(R[2,1], R[2,2])
+            y = math.atan2(-R[2,0], sy)
+            z = math.atan2(R[1,0], R[0,0])
+        else:
+            x = math.atan2(-R[1,2], R[1,1])
+            y = math.atan2(-R[2,0], sy)
+            z = 0
+        return np.rad2deg(np.array([x,y,z]))
+    
+    def getAttributes(self):
+        self.cameraMatrix = np.array([[921.170702, 0.000000, 459.904354], [0.000000, 919.018377, 351.238301], [0.000000, 0.000000, 1.000000]])
+        self.distCoeffs = np.array([-0.033458, 0.105152, 0.001256, -0.006647, 0.000000])
+        self.rvecs, self.tvecs, _objPoints = cv2.aruco.estimatePoseSingleMarkers(self.corners, 0.127, self.cameraMatrix, self.distCoeffs)
+        
+        R_flip  = np.zeros((3,3), dtype=np.float32)
+        R_flip[0,0] = 1.0
+        R_flip[1,1] =-1.0
+        R_flip[2,2] =-1.0
+        
+        R_tc = np.matrix(cv2.Rodrigues(self.rvecs)[0]).T
+        self.pitch, self.yaw, self.roll = self._rotationMatrix2EulerAngles(R_flip*R_tc)
+        self.pos_camera = -R_tc*np.matrix(self.tvecs).T
+        #these printouts are from the perspective of the marker
+        print("X translation vector is: " + str(self.pos_camera[0]))
+        print("Y translation vector is: " + str(self.pos_camera[1]))
+        print("Z translation vector is: " + str(self.pos_camera[2])) #distance to tag/tello
+        print("roll is: " + str(self.roll))
+        print("pitch is: " + str(-self.pitch))
+        print("yaw is: " + str(self.yaw))
         
         
 if __name__ == '__main__':
